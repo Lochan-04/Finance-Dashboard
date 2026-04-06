@@ -1,0 +1,134 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.chartCard {
+  padding: 22px;
+  border: 1px solid var(--border-color);
+  border-radius: 22px;
+  background: var(--bg-surface);
+  box-shadow: var(--shadow);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.cardHeader h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.cardHeader span {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.chartArea {
+  height: 320px;
+}
+
+.pieLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 220px);
+  gap: 18px;
+  align-items: center;
+}
+
+.legendList {
+  display: grid;
+  gap: 12px;
+}
+
+.legendItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  background: var(--bg-secondary);
+}
+
+.legendLabel,
+.legendMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.legendLabel {
+  color: var(--text-secondary);
+}
+
+.legendSwatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.legendMeta {
+  align-items: flex-end;
+}
+
+.tooltip {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  background: var(--bg-surface-strong);
+  box-shadow: var(--shadow);
+}
+
+.tooltipRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 6px;
+  color: var(--text-secondary);
+}
+
+.emptyState {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 20px;
+  border: 1px dashed var(--border-color);
+  border-radius: 18px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1040px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .chartCard {
+    padding: 18px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chartArea {
+    height: 260px;
+  }
+
+  .pieLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .legendMeta {
+    align-items: flex-start;
+  }
+}
