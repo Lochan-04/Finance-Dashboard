@@ -4,6 +4,7 @@
   border-radius: 22px;
   background: var(--bg-surface);
   box-shadow: var(--shadow);
+  min-width: 0;
 }
 
 .heading {
@@ -75,5 +76,9 @@
 
   .form {
     grid-template-columns: 1fr;
+  }
+
+  .submitButton {
+    width: 100%;
   }
 }

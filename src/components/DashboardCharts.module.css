@@ -10,6 +10,7 @@
   border-radius: 22px;
   background: var(--bg-surface);
   box-shadow: var(--shadow);
+  min-width: 0;
 }
 
 .cardHeader {
@@ -32,6 +33,7 @@
 
 .chartArea {
   height: 320px;
+  min-width: 0;
 }
 
 .pieLayout {
@@ -49,6 +51,7 @@
 .legendItem {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 12px;
   padding: 12px 14px;
   border: 1px solid var(--border-color);
@@ -61,6 +64,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
 }
 
 .legendLabel {
@@ -75,6 +79,7 @@
 
 .legendMeta {
   align-items: flex-end;
+  text-align: right;
 }
 
 .tooltip {
@@ -130,5 +135,20 @@
 
   .legendMeta {
     align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .chartArea {
+    height: 220px;
+  }
+
+  .legendItem {
+    flex-direction: column;
+  }
+
+  .legendMeta {
+    gap: 2px;
   }
 }

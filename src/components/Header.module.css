@@ -12,6 +12,10 @@
   box-shadow: var(--shadow);
 }
 
+.header > * {
+  min-width: 0;
+}
+
 .kicker {
   margin: 0 0 4px;
   color: var(--accent);
@@ -24,12 +28,14 @@
 .title {
   margin: 0;
   font-size: 1.3rem;
+  overflow-wrap: anywhere;
 }
 
 .subtitle {
   margin: 6px 0 0;
   color: var(--text-secondary);
   font-size: 0.92rem;
+  overflow-wrap: anywhere;
 }
 
 .actions {
@@ -37,6 +43,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 12px;
+  min-width: 0;
 }
 
 .roleSwitcher,
@@ -66,12 +73,14 @@
   outline: none;
   background: transparent;
   color: var(--text-primary);
+  min-width: 0;
 }
 
 @media (max-width: 720px) {
   .header {
     align-items: stretch;
     flex-direction: column;
+    padding: 16px 18px;
   }
 
   .actions {
@@ -82,5 +91,24 @@
   .themeButton {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .kicker {
+    font-size: 0.74rem;
+  }
+
+  .subtitle {
+    font-size: 0.86rem;
+  }
+
+  .roleSwitcher,
+  .themeButton {
+    padding: 0 12px;
   }
 }

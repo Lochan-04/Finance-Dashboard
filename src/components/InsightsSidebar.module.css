@@ -9,6 +9,7 @@
   border-radius: 22px;
   background: var(--bg-surface);
   box-shadow: var(--shadow);
+  min-width: 0;
 }
 
 .panelHeader {
@@ -30,6 +31,10 @@
   border: 1px solid var(--border-color);
   border-radius: 18px;
   background: var(--bg-secondary);
+}
+
+.metricCard > div:last-child {
+  min-width: 0;
 }
 
 .metricCard + .metricCard {
@@ -61,6 +66,7 @@
 .metricMeta {
   margin: 6px 0 0;
   color: var(--text-muted);
+  overflow-wrap: anywhere;
 }
 
 .noteList {
@@ -69,4 +75,14 @@
   margin: 16px 0 0;
   padding-left: 18px;
   color: var(--text-secondary);
+}
+
+@media (max-width: 480px) {
+  .panel {
+    padding: 18px;
+  }
+
+  .metricCard {
+    padding: 14px;
+  }
 }

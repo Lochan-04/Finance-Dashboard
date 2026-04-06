@@ -10,6 +10,7 @@
   border-radius: 20px;
   background: var(--bg-surface);
   box-shadow: var(--shadow);
+  min-width: 0;
 }
 
 .cardHeader {
@@ -34,10 +35,21 @@
 .value {
   display: block;
   font-size: clamp(1.35rem, 2vw, 1.95rem);
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 880px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    gap: 14px;
+  }
+
+  .card {
+    padding: 18px;
   }
 }

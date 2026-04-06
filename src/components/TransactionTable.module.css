@@ -4,6 +4,7 @@
   border-radius: 22px;
   background: var(--bg-surface);
   box-shadow: var(--shadow);
+  min-width: 0;
 }
 
 .header {
@@ -43,6 +44,7 @@
   align-items: center;
   gap: 10px;
   padding: 0 14px;
+  min-width: min(280px, 100%);
 }
 
 .searchField input {
@@ -50,6 +52,8 @@
   outline: none;
   background: transparent;
   color: inherit;
+  min-width: 0;
+  width: 100%;
 }
 
 .select,
@@ -63,11 +67,13 @@
 
 .tableWrap {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 680px;
 }
 
 .table th,
@@ -153,5 +159,19 @@
   .table td {
     padding: 12px 8px;
     white-space: nowrap;
+  }
+
+  .table {
+    min-width: 620px;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel {
+    padding: 16px;
+  }
+
+  .header {
+    gap: 14px;
   }
 }
